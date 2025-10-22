@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloudflare Turnstile Add-On for NEX Forms — Setup Guide</title>
+  <style>
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+      margin: 2rem auto;
+      max-width: 800px;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    h1 {
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.3em;
+    }
+    h2 {
+      margin-top: 2em;
+      color: #1e293b;
+    }
+    code {
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+    pre {
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    .tip {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 0.8em 1em;
+      margin: 1em 0;
+      border-radius: 6px;
+      color: #064e3b;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9em;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cloudflare Turnstile Add-On for NEX Forms</h1>
+  <p>
+    This plugin seamlessly adds <strong>Cloudflare Turnstile</strong> protection to your NEX Forms submissions. 
+    It automatically injects the Turnstile widget above the form’s submit button and verifies responses on submission.
+  </p>
+
+  <h2>🧩 Installation</h2>
+  <ol>
+    <li>Download or create the ZIP file: <code>cloudflare-turnstile-nexforms.zip</code>.</li>
+    <li>Go to <strong>WordPress Admin → Plugins → Add New → Upload Plugin</strong>.</li>
+    <li>Upload the ZIP file and click <strong>Install Now</strong>.</li>
+    <li>Activate the plugin.</li>
+  </ol>
+
+  <h2>⚙️ Configuration</h2>
+  <ol>
+    <li>Go to <strong>Settings → Turnstile for NEX Forms</strong>.</li>
+    <li>Enter your <strong>Site Key</strong> and <strong>Secret Key</strong> from the 
+        <a href="https://dash.cloudflare.com" target="_blank">Cloudflare Dashboard</a>.</li>
+    <li>Select your preferred <strong>theme</strong> (light or dark).</li>
+    <li>Click <strong>Save Settings</strong>.</li>
+  </ol>
+
+  <div class="tip">
+    💡 Tip: If you already use the official <strong>Cloudflare Turnstile</strong> plugin, this add-on will detect its keys automatically.  
+    You can leave the fields blank to use the global configuration.
+  </div>
+
+  <h2>🧪 Testing</h2>
+  <ul>
+    <li>Visit a page containing a <code>[NEXForms]</code> shortcode.</li>
+    <li>The Turnstile widget should appear <strong>above the Submit button</strong>.</li>
+    <li>Open your browser console (F12 → Console) and confirm you see:
+      <pre>✅ Turnstile rendered (light)</pre>
+    </li>
+    <li>Submit the form — it should complete successfully if the verification passes.</li>
+  </ul>
+
+  <h2>🚀 Notes</h2>
+  <ul>
+    <li>The script loads only on pages containing a NEX Forms shortcode.</li>
+    <li>Works seamlessly with dynamic or AJAX-rendered NEX Forms.</li>
+    <li>Gracefully handles network or verification failures with clear error messages.</li>
+  </ul>
+
+  <footer>
+    &copy; 2025 Cloudflare Turnstile Add-On for NEX Forms.  
+    Developed for professional WordPress integrations.
+  </footer>
+</body>
+</html>

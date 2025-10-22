@@ -1,0 +1,2 @@
+# POT file for Cloudflare Turnstile Add-on for NEX Forms
+# Run a proper i18n tool to generate.
