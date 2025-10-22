@@ -1,9 +1,0 @@
-banner-772x250.png (optional; 772×250)
-
-banner-1544x500.png (optional)
-
-icon-128x128.png (required for WP.org)
-
-icon-256x256.png (optional)
-
-screenshot-1.png, screenshot-2.png (show plugin settings page and form)
